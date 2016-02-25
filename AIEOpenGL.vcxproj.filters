@@ -8,44 +8,8 @@
     <Filter Include="Tutorials">
       <UniqueIdentifier>{f9b5163b-1602-4f61-9feb-18c1bfc74fd8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Tutorials\introductionOpenGL">
-      <UniqueIdentifier>{2661d1c0-aa15-4715-8cda-b72d3d108c64}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\renderingGeometry">
-      <UniqueIdentifier>{ed5a019b-d95d-4358-8fa6-f94cb692c22c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\texturing">
-      <UniqueIdentifier>{40e7c5d3-3016-4140-aeb2-1b68648bde6e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\quaternions">
-      <UniqueIdentifier>{3fc08095-20a3-4bc2-979a-5220d77127a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\proceduralGeneration">
-      <UniqueIdentifier>{92787fd4-ae21-4865-8f50-36405f287488}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\deferredLighting">
-      <UniqueIdentifier>{43aadd07-a6c1-41a0-b34f-8019ca6707c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\particles">
-      <UniqueIdentifier>{d096af38-9cd2-4469-950a-9471b3650ef0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\renderTargets">
-      <UniqueIdentifier>{aa4e7b74-334e-47fc-9521-a32f5d3bef59}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\shadows">
-      <UniqueIdentifier>{a4957aac-27f6-4e76-a4df-4fb6ee9073b1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Tutorials\lighting">
       <UniqueIdentifier>{711f4b73-9c80-421f-8087-c16dcb09e119}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\physicallyBasedRendering">
-      <UniqueIdentifier>{263bc0b5-0ee5-4661-927c-f3ee253c3e53}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\graphicalUserInterfaces">
-      <UniqueIdentifier>{7cef66fd-1ac5-4fbb-a325-6b224c3da72a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tutorials\imageBasedLighting">
-      <UniqueIdentifier>{c2319980-8297-479e-9f11-88d4e1cca9ab}</UniqueIdentifier>
     </Filter>
     <Filter Include="Base">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
@@ -78,38 +42,14 @@
     <ClCompile Include="src\gl_core_4_4.c">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="tutorials\SolarSystemApplication.cpp">
-      <Filter>Tutorials\introductionOpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Shader.cpp">
       <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Tutorials</Filter>
     </ClCompile>
-    <ClCompile Include="tutorials\RenderingGeomApplication.cpp">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </ClCompile>
     <ClCompile Include="src\Mesh.cpp">
       <Filter>Base</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\RenderingOBJApplication.cpp">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\TexturedOBJApplication.cpp">
-      <Filter>Tutorials\texturing</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\ProceduralGenerationApplication.cpp">
-      <Filter>Tutorials\proceduralGeneration</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\TexturingApplication.cpp">
-      <Filter>Tutorials\texturing</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\ApplyTextureOBJApplication.cpp">
-      <Filter>Tutorials\texturing</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\GUIApplication.cpp">
-      <Filter>Tutorials\graphicalUserInterfaces</Filter>
     </ClCompile>
     <ClCompile Include="tutorials\LightingOBJApplication.cpp">
       <Filter>Tutorials\lighting</Filter>
@@ -126,38 +66,8 @@
     <ClCompile Include="src\imgui_impl_glfw_gl3.cpp">
       <Filter>Imgui</Filter>
     </ClCompile>
-    <ClCompile Include="tutorials\ParticleApplication.cpp">
-      <Filter>Tutorials\particles</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\ParticleEmitter.cpp">
-      <Filter>Tutorials\particles</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorials\TexturedParticleApplication.cpp">
-      <Filter>Tutorials\particles</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tutorials\SolarSystemApplication.h">
-      <Filter>Tutorials\introductionOpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\RenderingGeomApplication.h">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\RenderingOBJApplication.h">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\TexturedOBJApplication.h">
-      <Filter>Tutorials\texturing</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\ProceduralGenerationApplication.h">
-      <Filter>Tutorials\proceduralGeneration</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\ApplyTextureOBJApplication.h">
-      <Filter>Tutorials\texturing</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\TexturingApplication.h">
-      <Filter>Tutorials\texturing</Filter>
-    </ClInclude>
     <ClInclude Include="src\imgui_impl_glfw_gl3.h">
       <Filter>Imgui</Filter>
     </ClInclude>
@@ -166,9 +76,6 @@
     </ClInclude>
     <ClInclude Include="dep\imgui\imgui_internal.h">
       <Filter>Imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\GUIApplication.h">
-      <Filter>Tutorials\graphicalUserInterfaces</Filter>
     </ClInclude>
     <ClInclude Include="tutorials\LightingOBJApplication.h">
       <Filter>Tutorials\lighting</Filter>
@@ -194,35 +101,8 @@
     <ClInclude Include="src\Mesh.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="tutorials\ParticleApplication.h">
-      <Filter>Tutorials\particles</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\ParticleEmitter.h">
-      <Filter>Tutorials\particles</Filter>
-    </ClInclude>
-    <ClInclude Include="tutorials\TexturedParticleApplication.h">
-      <Filter>Tutorials\particles</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\shaders\flat.frag">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </None>
-    <None Include="bin\shaders\flat.vert">
-      <Filter>Tutorials\renderingGeometry</Filter>
-    </None>
-    <None Include="bin\shaders\textured.frag">
-      <Filter>Tutorials\texturing</Filter>
-    </None>
-    <None Include="bin\shaders\textured.vert">
-      <Filter>Tutorials\texturing</Filter>
-    </None>
-    <None Include="bin\shaders\perlin.vert">
-      <Filter>Tutorials\proceduralGeneration</Filter>
-    </None>
-    <None Include="bin\shaders\perlin.frag">
-      <Filter>Tutorials\proceduralGeneration</Filter>
-    </None>
     <None Include="bin\shaders\phong.frag">
       <Filter>Tutorials\lighting</Filter>
     </None>
@@ -230,17 +110,5 @@
       <Filter>Tutorials\lighting</Filter>
     </None>
     <None Include="README.md" />
-    <None Include="bin\shaders\particle.frag">
-      <Filter>Tutorials\particles</Filter>
-    </None>
-    <None Include="bin\shaders\particle.vert">
-      <Filter>Tutorials\particles</Filter>
-    </None>
-    <None Include="bin\shaders\texturedParticle.frag">
-      <Filter>Tutorials\particles</Filter>
-    </None>
-    <None Include="bin\shaders\texturedParticle.vert">
-      <Filter>Tutorials\particles</Filter>
-    </None>
   </ItemGroup>
 </Project>

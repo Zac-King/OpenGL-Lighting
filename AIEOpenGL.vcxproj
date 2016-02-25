@@ -21,19 +21,8 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Shader.cpp" />
-    <ClCompile Include="tutorials\ApplyTextureOBJApplication.cpp" />
-    <ClCompile Include="tutorials\GUIApplication.cpp" />
     <ClCompile Include="tutorials\LightingOBJApplication.cpp" />
     <ClCompile Include="tutorials\LightingSphereApplication.cpp" />
-    <ClCompile Include="tutorials\ParticleApplication.cpp" />
-    <ClCompile Include="tutorials\ParticleEmitter.cpp" />
-    <ClCompile Include="tutorials\ProceduralGenerationApplication.cpp" />
-    <ClCompile Include="tutorials\RenderingGeomApplication.cpp" />
-    <ClCompile Include="tutorials\RenderingOBJApplication.cpp" />
-    <ClCompile Include="tutorials\SolarSystemApplication.cpp" />
-    <ClCompile Include="tutorials\TexturedOBJApplication.cpp" />
-    <ClCompile Include="tutorials\TexturedParticleApplication.cpp" />
-    <ClCompile Include="tutorials\TexturingApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dep\imgui\imgui.h" />
@@ -45,33 +34,12 @@
     <ClInclude Include="src\imgui_impl_glfw_gl3.h" />
     <ClInclude Include="src\Mesh.h" />
     <ClInclude Include="src\Shader.h" />
-    <ClInclude Include="tutorials\ApplyTextureOBJApplication.h" />
-    <ClInclude Include="tutorials\GUIApplication.h" />
     <ClInclude Include="tutorials\LightingOBJApplication.h" />
     <ClInclude Include="tutorials\LightingSphereApplication.h" />
-    <ClInclude Include="tutorials\ParticleApplication.h" />
-    <ClInclude Include="tutorials\ParticleEmitter.h" />
-    <ClInclude Include="tutorials\ProceduralGenerationApplication.h" />
-    <ClInclude Include="tutorials\RenderingGeomApplication.h" />
-    <ClInclude Include="tutorials\RenderingOBJApplication.h" />
-    <ClInclude Include="tutorials\SolarSystemApplication.h" />
-    <ClInclude Include="tutorials\TexturedOBJApplication.h" />
-    <ClInclude Include="tutorials\TexturedParticleApplication.h" />
-    <ClInclude Include="tutorials\TexturingApplication.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\shaders\flat.frag" />
-    <None Include="bin\shaders\flat.vert" />
-    <None Include="bin\shaders\particle.frag" />
-    <None Include="bin\shaders\particle.vert" />
-    <None Include="bin\shaders\perlin.frag" />
-    <None Include="bin\shaders\perlin.vert" />
     <None Include="bin\shaders\phong.frag" />
     <None Include="bin\shaders\phong.vert" />
-    <None Include="bin\shaders\textured.frag" />
-    <None Include="bin\shaders\textured.vert" />
-    <None Include="bin\shaders\texturedParticle.frag" />
-    <None Include="bin\shaders\texturedParticle.vert" />
     <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
