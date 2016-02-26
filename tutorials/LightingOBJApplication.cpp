@@ -38,8 +38,8 @@ bool LightingOBJApplication::startup() {
 	m_camera->setLookAtFrom(vec3(10, 10, 10), vec3(0));
 
 	// set up light (direction updates each frame)
-	m_directionalLight.diffuse = vec3(1);
-	m_directionalLight.specular = vec3(1);
+	m_directionalLight.diffuse = vec3(1); 
+	m_directionalLight.specular = vec3(1); 
 
 	m_ambientLight = vec3(0.25f);
 
