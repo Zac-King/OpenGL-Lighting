@@ -47,7 +47,7 @@ bool LightingSphereApplication::startup() {
 	m_material.diffuse = vec3(1);
 	m_material.ambient = vec3(1);
 	m_material.specular = vec3(1);
-	m_material.specularPower = 64;
+	m_material.specularPower = 64.f;
 
 	// generate a sphere with radius 5
 	generateSphere(32, 32, m_vao, m_vbo, m_ibo, m_indexCount);
