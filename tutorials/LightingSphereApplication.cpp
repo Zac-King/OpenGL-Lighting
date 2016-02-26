@@ -100,7 +100,8 @@ bool LightingSphereApplication::update(float deltaTime) {
 
 	// rotate light direction
 	float time = (float)glfwGetTime();
-	m_directionalLight.direction = vec3(sinf(time), 0, cosf(time));
+	//m_directionalLight.direction = vec3(glm::cos(glfwGetTime()) * .3f, 0, glm::sin(glfwGetTime())* .3f);			// Rotate Light Direction
+	m_directionalLight.direction = vec3(1, 0, 0);
 
 	// clear the gizmos and add a transform and grid
 	Gizmos::clear();
@@ -150,7 +151,7 @@ void LightingSphereApplication::draw() {
 
 	// bind light data (not using structs or uniform block for now)
 	int lightUniform = m_shader->getUniform("lightDirection");
-	glUniform3fv(lightUniform, 1, &m_directionalLight.direction[0]);
+	glUniform3fv(lightUniform, 1, &m_directionalLight.direction[0]);	// Direction
 
 	lightUniform = m_shader->getUniform("Id");
 	glUniform3fv(lightUniform, 1, &m_directionalLight.diffuse[0]);
@@ -179,6 +180,8 @@ void LightingSphereApplication::draw() {
 	materialUniform = m_shader->getUniform("specularPower");
 	glUniform1f(materialUniform, m_material.specularPower);
 
+	//m_material.diffuse = vec3(1)/* * glm::cos(glfwGetTime()) * 5.f*/;
+	
 	// draw mesh as a triangle mesh
 	glBindVertexArray(m_vao);
 	glDrawElements(GL_TRIANGLES, m_indexCount, GL_UNSIGNED_INT, 0);
