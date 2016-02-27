@@ -20,24 +20,37 @@ uniform vec3 cameraPosition;
 
 out vec4 FragColour;
 
-void main() {
+void main() 
+{
 	vec3 N = normalize(vNormal.xyz);
-	vec3 L = normalize(lightDirection);
+	vec3 L = normalize(lightDirection);	//-lightDirection - vPosition.xyz
+	
 
-	// Specular		:: materialSpectular * lightSpectular *((reflectedLight dot viewDirection)to the power of specularPower)
-	vec3 VertToEye	= normalize(cameraPosition - vPosition.xyz);
-	vec3 HalfWay	= normalize(VertToEye + L);
-	float s			= max(0.0f, dot(HalfWay, N));
-	vec3 specular	= Is * Ks  * pow(s, specularPower) + vec3(.5,.4,1);
+	//Diffuse Term
+	float diffuseTerm = max(0.0f, dot(N, L));
 
-	// Ambient		:: materialAmbient * ambientLight
-	vec3 ambient	= Ka * Ia;
+	//L = normalize(-lightDirection - vPosition.xyz);
 
-	// Diffuse		:: (materialDiffuse * (LightDirection.normalized dot vertNormal.noralized) * lightDiffuse)
-	vec3 diffuse	= Kd * (dot(vNormal.xyz, lightDirection)) * Id;
+	//Specular Term
+	vec3 vertToEye	= normalize(cameraPosition + vPosition.xyz);
+	vec3 halfWay	= normalize(vertToEye + (L - N));
+	float specularTerm	= max(0.0f, dot(halfWay, N));					
 
-	//ambient		= vec3(1,1,1);
-	//diffuse		= vec3(1,1,1);
-	//specular	= vec3(1,0,0);
-	FragColour	= vec4(ambient + diffuse + specular, 1);
+	if(diffuseTerm <= 0)
+	{
+		specularTerm = diffuseTerm;
+	}
+
+	// All the lights
+	vec3 diffuse = Kd * Id * diffuseTerm;
+	vec3 ambient = Ka * Ia;
+	vec3 specular = Ks * Is * pow(specularTerm, specularPower);
+	
+	
+
+	//diffuse  = vec3(0);
+	//ambient  = vec3(0);
+	//specular = vec3(0);
+
+	FragColour = vec4( diffuse + ambient + specular, 1);
 }

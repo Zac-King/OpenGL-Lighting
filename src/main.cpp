@@ -1,14 +1,15 @@
  
 #include "LightingOBJApplication.h"
 #include "LightingSphereApplication.h" 
+#include <iostream>
 
 int main() {
 	
 	// change startup application
-	BaseApplication* app = new LightingOBJApplication();
+	BaseApplication* app = new LightingSphereApplication();
 	if (app->startup())
 		app->run();
-	//system("pause");
+		//system("pause");
 	app->shutdown();
 
 	return 0;

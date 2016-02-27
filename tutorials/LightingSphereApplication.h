@@ -31,6 +31,8 @@ private:
 	Camera*		m_camera;
 	Shader*		m_shader;
 
+	bool lightToggle = false;
+
 	// define basic lighting
 	struct DirectionalLight {
 		glm::vec3 direction;

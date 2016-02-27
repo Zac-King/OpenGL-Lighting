@@ -41,7 +41,7 @@ bool LightingOBJApplication::startup() {
 	m_directionalLight.diffuse = vec3(1); 
 	m_directionalLight.specular = vec3(1); 
 
-	m_ambientLight = vec3(0.25f);
+	m_ambientLight = vec3(0.005f);
 
 	// load a mesh
 	m_mesh = new Mesh();

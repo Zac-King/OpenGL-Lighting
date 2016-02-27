@@ -10,6 +10,9 @@
 #include "Shader.h"
 #include "Mesh.h"
 
+#include <math.h>
+#include <iostream>
+
 using glm::vec2;
 using glm::vec3;
 using glm::vec4;
@@ -44,10 +47,10 @@ bool LightingSphereApplication::startup() {
 	m_ambientLight = vec3(0.25f);
 
 	// set up material
-	m_material.diffuse = vec3(1);
-	m_material.ambient = vec3(1);
-	m_material.specular = vec3(1);
-	m_material.specularPower = 64.f;
+	m_material.diffuse = vec3(1,0,0);
+	m_material.ambient	= vec3(0, 0, 1);
+	m_material.specular = vec3(0, 1, 0);
+	m_material.specularPower = 25.f;
 
 	// generate a sphere with radius 5
 	generateSphere(32, 32, m_vao, m_vbo, m_ibo, m_indexCount);
@@ -95,13 +98,59 @@ bool LightingSphereApplication::update(float deltaTime) {
 		glfwGetKey(m_window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		return false;
 
+	if (glfwGetKey(m_window, GLFW_KEY_Z) == GLFW_PRESS)
+	{
+		if (glfwGetKey(m_window, GLFW_KEY_UP) == GLFW_PRESS)		
+		{
+			m_material.diffuse += vec3(.01f);
+		}
+		if (glfwGetKey(m_window, GLFW_KEY_DOWN) == GLFW_PRESS)		
+		{
+			m_material.diffuse -= vec3(.01f);
+		}
+	}
+
+	if (glfwGetKey(m_window, GLFW_KEY_X) == GLFW_PRESS)
+	{
+		if (glfwGetKey(m_window, GLFW_KEY_UP) == GLFW_PRESS)	
+		{
+			m_material.ambient += vec3(.01f);
+		}
+		if (glfwGetKey(m_window, GLFW_KEY_DOWN) == GLFW_PRESS)	
+		{
+			m_material.ambient -= vec3(.01f);
+		}
+	}
+
+	if (glfwGetKey(m_window, GLFW_KEY_C) == GLFW_PRESS)
+	{
+		if (glfwGetKey(m_window, GLFW_KEY_UP) == GLFW_PRESS)		
+		{
+			m_material.specularPower += .1f;
+		}
+		if (glfwGetKey(m_window, GLFW_KEY_DOWN) == GLFW_PRESS)		
+		{
+			m_material.specularPower -= .1f;
+		}
+	}
+
 	// update the camera's movement
 	m_camera->update(deltaTime);
 
 	// rotate light direction
+	
+	if (glfwGetKey(m_window, GLFW_KEY_KP_3) == GLFW_PRESS)
+	{
+		lightToggle = !lightToggle;
+	}
+	//if (lightToggle)
+		m_directionalLight.direction = vec3(glm::cos(glfwGetTime()) * .3f, 0, glm::sin(glfwGetTime())* .3f);			// Rotate Light Direction
+	//else
+	//	m_directionalLight.direction = vec3(5, 0, 0);
+
 	float time = (float)glfwGetTime();
-	//m_directionalLight.direction = vec3(glm::cos(glfwGetTime()) * .3f, 0, glm::sin(glfwGetTime())* .3f);			// Rotate Light Direction
-	m_directionalLight.direction = vec3(1, 0, 0);
+	
+	
 
 	// clear the gizmos and add a transform and grid
 	Gizmos::clear();
